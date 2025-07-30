@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="af1779bdc3cf221000a8991ed40131b3" label="Interviews" max_length="40" name="x_1761730_ats_interviews" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Interview ID" max_length="40" name="number" type="string"/>
+        <element label="Feedback" max_length="200" name="feedback" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Phone" sequence="0" value="phone"/>
+                <element inactive_on_update="false" label="Video Call" sequence="1" value="video_call"/>
+                <element inactive_on_update="false" label="In Person" sequence="2" value="in_person"/>
+            </choice>
+        </element>
+        <element label="Scheduled Time" max_length="40" name="scheduled_time" type="glide_date_time"/>
+        <element label="Level" max_length="255" name="level" type="integer"/>
+        <element label="Application ID" max_length="32" name="application_id" reference="x_1761730_ats_applications" type="reference"/>
+        <element label="Interviewer" max_length="50" name="interviewer" type="string"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Scheduled" sequence="0" value="scheduled"/>
+                <element inactive_on_update="false" label="Feedback Pending" sequence="4" value="feedback_pending"/>
+                <element inactive_on_update="false" label="Rescheduled" sequence="1" value="rescheduled"/>
+                <element inactive_on_update="false" label="Selected" sequence="5" value="selected"/>
+                <element inactive_on_update="false" label="Rejected" sequence="6" value="rejected"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="2" value="cancelled"/>
+                <element inactive_on_update="false" label="No Show" sequence="3" value="no_show"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="application_id"/>
+        </index>
+    </element>
+</database>
