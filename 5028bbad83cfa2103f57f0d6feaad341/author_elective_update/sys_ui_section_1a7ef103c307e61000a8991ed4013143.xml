@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="New section 1" section_id="1a7ef103c307e61000a8991ed4013143" sys_domain="global" table="x_1761730_ats_job_listings" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>a27ef103c307e61000a8991ed4013174</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>aa7ef103c307e61000a8991ed4013174</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>positions</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>a27ef103c307e61000a8991ed4013175</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>aa7ef103c307e61000a8991ed4013175</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>due_date</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>a27ef103c307e61000a8991ed4013176</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>interview_levels</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>aa7ef103c307e61000a8991ed4013176</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_by</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+            <sys_id>a27ef103c307e61000a8991ed4013177</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>New section 1</caption>
+            <header>false</header>
+            <name>x_1761730_ats_job_listings</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-08-03 16:52:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1a7ef103c307e61000a8991ed4013143</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1761730_ats_job_listings</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+            <sys_update_name>sys_ui_section_1a7ef103c307e61000a8991ed4013143</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-08-03 16:52:42</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</application>
+        <file_path/>
+        <instance_id>f1e135701bb28e9ce84d2f8dee4bcb2f</instance_id>
+        <instance_name>dev274771</instance_name>
+        <name>sys_ui_section_1a7ef103c307e61000a8991ed4013143</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="New section 1" section_id="1a7ef103c307e61000a8991ed4013143" sys_domain="global" table="x_1761730_ats_job_listings" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>priority</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>a27ef103c307e61000a8991ed4013174</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>type</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>aa7ef103c307e61000a8991ed4013174</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>positions</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>a27ef103c307e61000a8991ed4013175</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>aa7ef103c307e61000a8991ed4013175</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>due_date</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>a27ef103c307e61000a8991ed4013176</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>interview_levels</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>aa7ef103c307e61000a8991ed4013176</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>requested_by</element><position>6</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:43</sys_created_on><sys_id>a27ef103c307e61000a8991ed4013177</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New section 1" display_value="New section 1" name="x_1761730_ats_job_listings" sys_domain="global" view="Default view">1a7ef103c307e61000a8991ed4013143</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:43</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>New section 1</caption><header>false</header><name>x_1761730_ats_job_listings</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-08-03 16:52:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>1a7ef103c307e61000a8991ed4013143</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1761730_ats_job_listings</sys_name><sys_overrides/><sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package><sys_policy/><sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope><sys_update_name>sys_ui_section_1a7ef103c307e61000a8991ed4013143</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-08-03 16:52:42</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>475613398</payload_hash>
+        <record_name>Job Listings</record_name>
+        <reverted_from/>
+        <source>d90ae9b9c38f221000a8991ed401313d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 16:52:43</sys_created_on>
+        <sys_id>2a7ef103c307e61000a8991ed4013179</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19870d990570000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 16:52:43</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>ae7ef1030707e610c07012ae8dc8e778</update_guid>
+        <update_guid_history>ae7ef1030707e610c07012ae8dc8e778:475613398</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 16:55:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>4f3d604afb6244989d8bb4cf82ea8464</sys_id>
+        <sys_metadata>1a7ef103c307e61000a8991ed4013143</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New section 1</sys_name>
+        <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+        <sys_parent display_value="Job Listings">38cda5b1c3cf221000a8991ed40131a5</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+        <sys_scope_delete display_value="">103fb8b064d24e788209d5fb1ca24604</sys_scope_delete>
+        <sys_update_name>sys_ui_section_1a7ef103c307e61000a8991ed4013143</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_1a7ef103c307e61000a8991ed4013143">2a7ef103c307e61000a8991ed4013179</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-03 16:55:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

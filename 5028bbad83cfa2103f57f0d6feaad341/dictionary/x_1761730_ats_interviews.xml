@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="af1779bdc3cf221000a8991ed40131b3" label="Interviews" max_length="40" name="x_1761730_ats_interviews" type="collection">
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Interview ID" max_length="40" name="number" type="string"/>
-        <element label="Feedback" max_length="200" name="feedback" type="string"/>
+        <element label="Feedback" max_length="300" name="feedback" type="string"/>
         <element choice="1" label="Type" max_length="40" name="type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Phone" sequence="0" value="phone"/>
