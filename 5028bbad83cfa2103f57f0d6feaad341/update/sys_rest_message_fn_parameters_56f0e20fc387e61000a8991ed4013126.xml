@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>messages</name>
+        <rest_message_function display_value="Get Resume Ranking">daa02ecbc387e61000a8991ed4013198</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 19:24:04</sys_created_on>
+        <sys_id>56f0e20fc387e61000a8991ed4013126</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>messages</sys_name>
+        <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_56f0e20fc387e61000a8991ed4013126</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 05:45:00</sys_updated_on>
+        <type>string</type>
+        <value>[{
+                "role": "system",
+                "content": "You are a hiring expert. Given the job description and a resume, evaluate how well the candidate matches the job. Provide 1. A score from 1 (poor match) to 10 (perfect match)2. A brief explanation of your reasoning in 2 lines. Provide the above information in JSON format with score and explanation as keys"
+            },
+            {
+                "role": "user",
+                "content": "Following are the job description and resume Job Description is Job Title: Software Developer. We are seeking a skilled and passionate Software Developer to join our dynamic technology team. The ideal candidate will be responsible for designing, developing, testing, and maintaining high-quality software applications. You will collaborate closely with cross-functional teams, including product managers, designers, and other engineers, to build scalable solutions that solve real-world problems. Key responsibilities include writing clean, efficient, and well-documented code, participating in code reviews, debugging and resolving technical issues, and contributing to the overall architecture of the application. The role requires strong knowledge of programming languages such as Python, JavaScript, or Java, and experience with modern frameworks like React, Node.js, or Django.A solid understanding of RESTful APIs, version control systems (Git), and database technologies (SQL and NoSQL) is essential. Experience in agile development methodologies and familiarity with DevOps practices will be advantageous.We value creativity, teamwork, and a strong desire to continuously learn and grow. The ideal candidate has a Bachelors degree in Computer Science or a related field and 2+ years of professional development experience.Join us in building innovative software that makes a difference. If you love coding and solving complex challenges, wed love to hear from you!. Following is the resume of a candidate John Doe is a skilled Software Developer with over 3 years of experience in building and maintaining scalable web applications. He has a strong command of Python, JavaScript, and Java, and is proficient in modern frameworks like React, Django, and Node.js. His experience includes developing RESTful APIs, working with both SQL and NoSQL databases, and contributing to CI/CD pipelines using tools like Git and Docker. John has a proven track record of improving code quality and reducing bugs through effective testing practices. He thrives in Agile environments, actively participating in sprints and code reviews. With a B.S. in Computer Science from UC Berkeley, he combines technical expertise with a collaborative mindset to deliver impactful software solutions."
+            }]</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+"model": ${model},&#13;
+"messages": ${messages},&#13;
+"temperature": ${temperature}&#13;
+}</content>
+        <function_name>Get Resume Ranking</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>Resume Ranking [ Get Resume Ranking ]</qualified_name>
+        <rest_endpoint>https://api.perplexity.ai/chat/completions</rest_endpoint>
+        <rest_message display_value="Resume Ranking">0320a2cbc387e61000a8991ed401317c</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 19:23:20</sys_created_on>
+        <sys_id>daa02ecbc387e61000a8991ed4013198</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Resume Ranking</sys_name>
+        <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+        <sys_update_name>sys_rest_message_fn_daa02ecbc387e61000a8991ed4013198</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 05:42:59</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>

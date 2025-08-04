@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1761730_ats_applications</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1761730_ats_applications">job_idISNOTEMPTY^applicant_idISNOTEMPTY^EQ<item endquery="false" field="job_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="applicant_id" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Resume Ranking</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    try {
+        var r = new sn_ws.RESTMessageV2('x_1761730_ats.Resume Ranking', 'Get Resume Ranking');
+		// var messages = [
+		// 	{'role': 'system', 'content': 'You are a helpful assistant.'},
+		// 	{'role': 'user', 'content': 'What is the capital of Spain?'}
+        // ];
+		var messages = [{
+                "role": "system",
+                "content": "You are a hiring expert. Given the job description and a resume, evaluate how well the candidate matches the job. Provide 1. A score from 1 (poor match) to 10 (perfect match)2. A brief explanation of your reasoning in 2 lines. Provide the above information in JSON format with score and explanation as keys"
+            },
+            {
+                "role": "user",
+                "content": "Following are the job description and resume Job Description is Job Title: Software Developer. We are seeking a skilled and passionate Software Developer to join our dynamic technology team. The ideal candidate will be responsible for designing, developing, testing, and maintaining high-quality software applications. You will collaborate closely with cross-functional teams, including product managers, designers, and other engineers, to build scalable solutions that solve real-world problems. Key responsibilities include writing clean, efficient, and well-documented code, participating in code reviews, debugging and resolving technical issues, and contributing to the overall architecture of the application. The role requires strong knowledge of programming languages such as Python, JavaScript, or Java, and experience with modern frameworks like React, Node.js, or Django.A solid understanding of RESTful APIs, version control systems (Git), and database technologies (SQL and NoSQL) is essential. Experience in agile development methodologies and familiarity with DevOps practices will be advantageous.We value creativity, teamwork, and a strong desire to continuously learn and grow. The ideal candidate has a Bachelors degree in Computer Science or a related field and 2+ years of professional development experience.Join us in building innovative software that makes a difference. If you love coding and solving complex challenges, wed love to hear from you!. Following is the resume of a candidate John Doe is a skilled Software Developer with over 3 years of experience in building and maintaining scalable web applications. He has a strong command of Python, JavaScript, and Java, and is proficient in modern frameworks like React, Django, and Node.js. His experience includes developing RESTful APIs, working with both SQL and NoSQL databases, and contributing to CI/CD pipelines using tools like Git and Docker. John has a proven track record of improving code quality and reducing bugs through effective testing practices. He thrives in Agile environments, actively participating in sprints and code reviews. With a B.S. in Computer Science from UC Berkeley, he combines technical expertise with a collaborative mindset to deliver impactful software solutions."
+            }];
+		payload = {
+			'model': "sonar-pro",
+			'messages': messages,
+			'temperature': 0.7
+		};
+		r.setRequestBody(JSON.stringify(payload));
+        var response = r.executeAsync();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+		if (httpStatus === 200) {		
+			var jsonResponseBody = JSON.parse(responseBody);
+			if (jsonResponseBody["choices"] && jsonResponseBody["choices"].length > 0) {
+				var responseContent = JSON.parse(jsonResponseBody["choices"][0]['message']['content']);
+				current.resume_ranking = responseContent["score"] || 0;
+				current.resume_ranking_summary = responseContent["explanation"] || "";
+				current.update();
+			}	
+		}
+    } catch (ex) {
+        var message = ex.message;
+    }
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-03 19:40:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f704a203c3c7e61000a8991ed4013126</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>Resume Ranking</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+        <sys_update_name>sys_script_f704a203c3c7e61000a8991ed4013126</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-04 09:03:44</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=f704a203c3c7e61000a8991ed4013126"/>
+</record_update>

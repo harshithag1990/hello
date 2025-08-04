@@ -17,6 +17,7 @@
         </element>
         <element label="Referral" max_length="50" name="referral" type="string"/>
         <element label="Job ID" max_length="32" name="job_id" reference="x_1761730_ats_job_listings" type="reference"/>
+        <element label="Resume ranking summary" max_length="1000" name="resume_ranking_summary" type="string"/>
         <element label="Resume ranking" max_length="40" name="resume_ranking" type="float"/>
         <index name="index">
             <element name="applicant_id"/>

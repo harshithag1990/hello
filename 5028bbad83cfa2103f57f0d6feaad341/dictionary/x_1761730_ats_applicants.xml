@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="f8023139c3cf221000a8991ed401312f" label="Applicants" max_length="40" name="x_1761730_ats_applicants" type="collection">
+    <element attributes="hasLabels=true" db_object_id="f8023139c3cf221000a8991ed401312f" label="Applicants" max_length="40" name="x_1761730_ats_applicants" type="collection">
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Applicant ID" max_length="40" name="number" type="string"/>
         <element label="LinkedIn URL" max_length="1024" name="linkedin_url" type="url"/>
         <element label="Education" max_length="200" name="education" type="simple_name_values"/>
         <element label="Skills" max_length="200" name="skills" type="simple_name_values"/>
         <element label="Email" max_length="40" name="email" type="string"/>
-        <element label="Resume Link" max_length="1024" name="resume_link" type="url"/>
+        <element label="Resume Link" max_length="4000" name="resume_link" type="string"/>
         <element label="Experience" max_length="200" name="experience" type="simple_name_values"/>
     </element>
 </database>
