@@ -4,27 +4,13 @@
             <element>email</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-08-03 17:44:25</sys_created_on>
-            <sys_id>334ac2cfc307e61000a8991ed401314a</sys_id>
+            <sys_created_on>2025-08-06 18:03:57</sys_created_on>
+            <sys_id>db8b2588c3932e1000a8991ed4013198</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1761730_ats_applicants" sys_domain="global" view="Default view">9d023db5c3cf221000a8991ed4013182</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-03 17:44:25</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>resume_link</element>
-            <position>1</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-08-03 17:44:25</sys_created_on>
-            <sys_id>3b4ac2cfc307e61000a8991ed401314a</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1761730_ats_applicants" sys_domain="global" view="Default view">9d023db5c3cf221000a8991ed4013182</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-08-03 17:44:25</sys_updated_on>
+            <sys_updated_on>2025-08-06 18:03:57</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

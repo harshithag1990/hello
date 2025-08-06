@@ -16,7 +16,7 @@
                 <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
             </choice>
         </element>
-        <element label="Document Link" max_length="4000" name="document_link" type="string"/>
+        <element label="Document Link" max_length="4000" name="document_link" type="file_attachment"/>
         <element label="Positions" max_length="40" name="positions" type="integer"/>
         <element label="Interview Levels" max_length="40" name="interview_levels" type="integer"/>
         <element label="Comments" max_length="150" name="comments" type="string"/>

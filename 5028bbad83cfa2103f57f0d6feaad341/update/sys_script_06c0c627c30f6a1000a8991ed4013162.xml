@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1761730_ats_applicants</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>resumeParser</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var r = new sn_ws.RESTMessageV2('x_1761730_ats.Resume Ranking', 'Get Resume Ranking');
+
+    // var attachmentGR = new GlideRecord('sys_attachment');
+    // attachmentGR.setLimit(10);
+    // attachmentGR.addQuery('table_name', current.getTableName()); // Change to your table
+    // attachmentGR.addQuery('table_sys_id', current.getUniqueValue()); // Sys ID of the record
+    // attachmentGR.query();
+    // var fileContent = "";
+    // if (attachmentGR.next()) {
+    var attachment = new GlideSysAttachment();
+    var agr = attachment.getAttachments(current.getTableName(), current.getUniqueValue());
+	var attachmentContent = "";
+    while (agr.next()) {
+        gs.info(agr.getValue('file_name'));
+        gs.info("content type");
+        gs.info(agr.getValue('content_type'));
+        attachmentContent = attachment.getContent(agr);
+        gs.info(attachmentContent);
+    }
+
+    var messages = [
+        {
+            "role": "system",
+            "content": "You are a resume extractor.Extract the required information from the resume content and present the following details in structured JSON format"
+        },
+		{
+			"role": "user",
+			"content": attachmentContent
+		}
+    ];
+    payload = {
+        'model': "sonar-pro",
+        'messages': messages,
+        'temperature': 0.7
+    };
+
+
+    try {
+        var r = new sn_ws.RESTMessageV2('x_1761730_ats.Resume Ranking', 'Get Resume Ranking');
+        r.setRequestBody(JSON.stringify(payload));
+        var response = r.executeAsync();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        if (httpStatus === 200) {
+            var jsonResponseBody = JSON.parse(responseBody);
+            if (jsonResponseBody["choices"] && jsonResponseBody["choices"].length > 0) {
+                var responseContent = jsonResponseBody["choices"][0]['message']['content'];
+				gs.info(responseContent);
+				// current.extracted_resume_details.test2 = {'testing': 123};
+				current.extracted_resume_details = responseContent;
+                // current.resume_ranking = responseContent["score"] || 0;
+                // current.resume_ranking_summary = responseContent["explanation"] || "";
+                current.update();
+            }
+        }
+    } catch (ex) {
+        var message = ex.message;
+        gs.error(message);
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-08-05 06:28:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>06c0c627c30f6a1000a8991ed4013162</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>resumeParser</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
+        <sys_update_name>sys_script_06c0c627c30f6a1000a8991ed4013162</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-08-06 17:53:38</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=06c0c627c30f6a1000a8991ed4013162"/>
+</record_update>
