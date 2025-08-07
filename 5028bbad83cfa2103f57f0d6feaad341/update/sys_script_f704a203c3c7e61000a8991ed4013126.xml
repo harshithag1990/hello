@@ -31,38 +31,70 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // var fetchSysID = function(tableName, id) {
+    //     var gr = new GlideRecord(tableName);
+    //     gs.info("id----->", id);
+
+    //     // Add filter conditions
+    //     gr.addQuery('number', id); // e.g., Priority is Critical
+    //     gr.query();
+
+    //     if (gr.next()) {
+    //         // Record found, print field values
+    //         gs.info("entered if----->");
+    //         return gr.getValue('sys_id');
+    //     } else {
+    //         gs.info('No matching records found.');
+    //         return;
+    //     }
+    // };
+
+    // gs.info("entered---->");
+    // gs.info(current)
+
+    // var jobListingSysID = fetchSysID("x_1761730_ats_job_listings", current.getDisplayValue("status"));
+    // gs.info("listing-------->");
+    // gs.info(jobListingSysID);
+
     try {
+    	// gs.info("entered---->");
+    	// var jobListingSysID = fetchSysID("x_1761730_ats_job_listings", current.getValue("job_id"));
+    	// gs.info("listing-------->");
+    	// gs.info(jobListingSysID);
+
         var r = new sn_ws.RESTMessageV2('x_1761730_ats.Resume Ranking', 'Get Resume Ranking');
-		// var messages = [
-		// 	{'role': 'system', 'content': 'You are a helpful assistant.'},
-		// 	{'role': 'user', 'content': 'What is the capital of Spain?'}
+        // var messages = [
+        // 	{'role': 'system', 'content': 'You are a helpful assistant.'},
+        // 	{'role': 'user', 'content': 'What is the capital of Spain?'}
         // ];
-		var messages = [{
+        var messages = [{
                 "role": "system",
                 "content": "You are a hiring expert. Given the job description and a resume, evaluate how well the candidate matches the job. Provide 1. A score from 1 (poor match) to 10 (perfect match)2. A brief explanation of your reasoning in 2 lines. Provide the above information in JSON format with score and explanation as keys"
             },
             {
                 "role": "user",
                 "content": "Following are the job description and resume Job Description is Job Title: Software Developer. We are seeking a skilled and passionate Software Developer to join our dynamic technology team. The ideal candidate will be responsible for designing, developing, testing, and maintaining high-quality software applications. You will collaborate closely with cross-functional teams, including product managers, designers, and other engineers, to build scalable solutions that solve real-world problems. Key responsibilities include writing clean, efficient, and well-documented code, participating in code reviews, debugging and resolving technical issues, and contributing to the overall architecture of the application. The role requires strong knowledge of programming languages such as Python, JavaScript, or Java, and experience with modern frameworks like React, Node.js, or Django.A solid understanding of RESTful APIs, version control systems (Git), and database technologies (SQL and NoSQL) is essential. Experience in agile development methodologies and familiarity with DevOps practices will be advantageous.We value creativity, teamwork, and a strong desire to continuously learn and grow. The ideal candidate has a Bachelors degree in Computer Science or a related field and 2+ years of professional development experience.Join us in building innovative software that makes a difference. If you love coding and solving complex challenges, wed love to hear from you!. Following is the resume of a candidate John Doe is a skilled Software Developer with over 3 years of experience in building and maintaining scalable web applications. He has a strong command of Python, JavaScript, and Java, and is proficient in modern frameworks like React, Django, and Node.js. His experience includes developing RESTful APIs, working with both SQL and NoSQL databases, and contributing to CI/CD pipelines using tools like Git and Docker. John has a proven track record of improving code quality and reducing bugs through effective testing practices. He thrives in Agile environments, actively participating in sprints and code reviews. With a B.S. in Computer Science from UC Berkeley, he combines technical expertise with a collaborative mindset to deliver impactful software solutions."
-            }];
-		payload = {
-			'model': "sonar-pro",
-			'messages': messages,
-			'temperature': 0.7
-		};
-		r.setRequestBody(JSON.stringify(payload));
+            }
+        ];
+        payload = {
+            'model': "sonar-pro",
+            'messages': messages,
+            'temperature': 0.7
+        };
+        r.setRequestBody(JSON.stringify(payload));
         var response = r.executeAsync();
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
-		if (httpStatus === 200) {		
-			var jsonResponseBody = JSON.parse(responseBody);
-			if (jsonResponseBody["choices"] && jsonResponseBody["choices"].length > 0) {
-				var responseContent = JSON.parse(jsonResponseBody["choices"][0]['message']['content']);
-				current.resume_ranking = responseContent["score"] || 0;
-				current.resume_ranking_summary = responseContent["explanation"] || "";
-				current.update();
-			}	
-		}
+        if (httpStatus === 200) {
+            var jsonResponseBody = JSON.parse(responseBody);
+            if (jsonResponseBody["choices"] && jsonResponseBody["choices"].length > 0) {
+                var responseContent = JSON.parse(jsonResponseBody["choices"][0]['message']['content']);
+                current.resume_ranking = responseContent["score"] || 0;
+                current.resume_ranking_summary = responseContent["explanation"] || "";
+                current.update();
+            }
+        }
     } catch (ex) {
         var message = ex.message;
     }
@@ -73,7 +105,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f704a203c3c7e61000a8991ed4013126</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>Resume Ranking</sys_name>
         <sys_overrides/>
         <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
@@ -81,7 +113,7 @@
         <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
         <sys_update_name>sys_script_f704a203c3c7e61000a8991ed4013126</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-04 09:03:44</sys_updated_on>
+        <sys_updated_on>2025-08-06 19:04:43</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>

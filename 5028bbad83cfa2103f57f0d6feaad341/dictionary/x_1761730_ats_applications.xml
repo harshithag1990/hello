@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="ec14f9b9c3cf221000a8991ed40131c6" label="Applications" max_length="40" name="x_1761730_ats_applications" type="collection">
-        <element label="Matching keywords" max_length="150" name="matching_keywords" type="simple_name_values"/>
+        <element label="Matching keywords" max_length="1000" name="matching_keywords" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Application ID" max_length="40" name="number" type="string"/>
         <element label="Source" max_length="40" name="source" type="string"/>
         <element label="Applicant ID" max_length="32" name="applicant_id" reference="x_1761730_ats_applicants" type="reference"/>

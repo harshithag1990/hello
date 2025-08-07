@@ -41,11 +41,11 @@
     var agr = attachment.getAttachments(current.getTableName(), current.getUniqueValue());
 	var attachmentContent = "";
     while (agr.next()) {
-        gs.info(agr.getValue('file_name'));
-        gs.info("content type");
-        gs.info(agr.getValue('content_type'));
+        // gs.info(agr.getValue('file_name'));
+        // gs.info("content type");
+        // gs.info(agr.getValue('content_type'));
         attachmentContent = attachment.getContent(agr);
-        gs.info(attachmentContent);
+        // gs.info(attachmentContent);
     }
 
     var messages = [
@@ -75,7 +75,7 @@
             var jsonResponseBody = JSON.parse(responseBody);
             if (jsonResponseBody["choices"] && jsonResponseBody["choices"].length > 0) {
                 var responseContent = jsonResponseBody["choices"][0]['message']['content'];
-				gs.info(responseContent);
+				// gs.info(responseContent);
 				// current.extracted_resume_details.test2 = {'testing': 123};
 				current.extracted_resume_details = responseContent;
                 // current.resume_ranking = responseContent["score"] || 0;
@@ -95,7 +95,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>06c0c627c30f6a1000a8991ed4013162</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>resumeParser</sys_name>
         <sys_overrides/>
         <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
@@ -103,7 +103,7 @@
         <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
         <sys_update_name>sys_script_06c0c627c30f6a1000a8991ed4013162</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-06 17:53:38</sys_updated_on>
+        <sys_updated_on>2025-08-06 18:27:36</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
