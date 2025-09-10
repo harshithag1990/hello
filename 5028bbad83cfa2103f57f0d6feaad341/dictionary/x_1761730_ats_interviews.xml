@@ -9,7 +9,7 @@
                 <element inactive_on_update="false" label="In Person" sequence="2" value="in_person"/>
             </choice>
         </element>
-        <element label="Scheduled Time" max_length="40" name="scheduled_time" type="glide_date_time"/>
+        <element label="Scheduled Time" max_length="40" name="scheduled_time" type="string"/>
         <element label="Level" max_length="255" name="level" type="integer"/>
         <element label="Application ID" max_length="32" name="application_id" reference="x_1761730_ats_applications" type="reference"/>
         <element label="Interviewer" max_length="50" name="interviewer" type="string"/>

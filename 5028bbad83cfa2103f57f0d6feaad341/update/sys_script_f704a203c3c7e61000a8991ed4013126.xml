@@ -132,7 +132,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f704a203c3c7e61000a8991ed4013126</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>73</sys_mod_count>
         <sys_name>Resume Ranking</sys_name>
         <sys_overrides/>
         <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
@@ -140,7 +140,7 @@
         <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
         <sys_update_name>sys_script_f704a203c3c7e61000a8991ed4013126</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-08-07 08:57:50</sys_updated_on>
+        <sys_updated_on>2025-08-08 06:35:55</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
