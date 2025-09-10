@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ec14f9b9c3cf221000a8991ed40131c6" label="Applications" max_length="40" name="x_1761730_ats_applications" type="collection">
+        <element label="Matching keywords" max_length="150" name="matching_keywords" type="data_structure"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Application ID" max_length="40" name="number" type="string"/>
+        <element label="Source" max_length="40" name="source" type="string"/>
+        <element label="Applicant ID" max_length="32" name="applicant_id" reference="x_1761730_ats_applicants" type="reference"/>
+        <element choice="3" default="applied" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="In Review" sequence="1" value="in_review"/>
+                <element inactive_on_update="false" label="Offered" sequence="3" value="offered"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
+                <element inactive_on_update="false" label="In Interview" sequence="2" value="in_interview"/>
+                <element inactive_on_update="false" label="Hired" sequence="5" value="hired"/>
+                <element inactive_on_update="false" label="Applied" sequence="0" value="applied"/>
+                <element inactive_on_update="false" label="Offer Rejected" sequence="6" value="offer_rejected"/>
+            </choice>
+        </element>
+        <element label="Referral" max_length="50" name="referral" type="string"/>
+        <element label="Job ID" max_length="32" name="job_id" reference="x_1761730_ats_job_listings" type="reference"/>
+        <element label="Resume ranking" max_length="40" name="resume_ranking" type="float"/>
+        <index name="index">
+            <element name="applicant_id"/>
+        </index>
+        <index name="index2">
+            <element name="job_id"/>
+        </index>
+    </element>
+</database>

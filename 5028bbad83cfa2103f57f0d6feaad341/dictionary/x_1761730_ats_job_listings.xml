@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="38cda5b1c3cf221000a8991ed40131a5" label="Job Listings" max_length="40" name="x_1761730_ats_job_listings" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Job ID" max_length="40" name="number" type="string"/>
+        <element label="Summary" max_length="200" name="summary" type="string"/>
+        <element choice="3" default="open" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="Closed" sequence="1" value="closed"/>
+                <element inactive_on_update="false" label="On hold" sequence="2" value="on_hold"/>
+            </choice>
+        </element>
+        <element choice="3" default="low" label="Priority" max_length="40" name="priority" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="2" value="high"/>
+                <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+            </choice>
+        </element>
+        <element label="Document Link" max_length="100" name="document_link" type="string"/>
+        <element label="Positions" max_length="40" name="positions" type="integer"/>
+        <element label="Interview Levels" max_length="40" name="interview_levels" type="integer"/>
+        <element label="Comments" max_length="150" name="comments" type="string"/>
+        <element label="Requested by" max_length="50" name="requested_by" type="string"/>
+        <element label="Title" max_length="80" name="title" type="string"/>
+        <element label="Closed Positions" max_length="40" name="closed_positions" type="integer"/>
+        <element label="Due Date" max_length="40" name="due_date" type="glide_date_time"/>
+        <element choice="3" default="full_time" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Full-time" sequence="0" value="full_time"/>
+                <element inactive_on_update="false" label="Part-time" sequence="1" value="part_time"/>
+                <element inactive_on_update="false" label="Contract" sequence="2" value="contract"/>
+            </choice>
+        </element>
+    </element>
+</database>
