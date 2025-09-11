@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" db_object_id="bb9c2793c333221000a8991ed40131c7" extends="sys_metadata" label="Prompts" max_length="40" name="x_1761730_ats_prompts" type="collection">
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+        <element label="Modified Prompt" max_length="1000" name="modified_prompt" type="string"/>
+        <element label="Input Schema" max_length="500" name="input_schema" type="string"/>
+        <element label="Original Prompt" max_length="1000" name="original_prompt" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Parameters" max_length="200" name="parameters" type="string"/>
+        <element label="Output Schema" max_length="100" name="output_schema" type="string"/>
+    </element>
+</database>
