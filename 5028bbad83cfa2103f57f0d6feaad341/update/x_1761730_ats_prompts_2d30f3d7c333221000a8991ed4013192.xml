@@ -7,7 +7,49 @@
      email: String,&#13;
      qualifications: [Object, ... ]&#13;
 }</input_schema>
-        <modified_prompt/>
+        <modified_prompt>Evaluate the following resume JSON for risks and clarification needs.&#13;
+&#13;
+### Output (JSON only, no prose)&#13;
+Return ONLY a JSON object with these two keys:&#13;
+  - red_flags: array of items with fields:&#13;
+  - type: one of ["employment_gap","job_hopping","skill_mismatch","contradiction"]&#13;
+  - severity: one of ["minor", "moderate", "major"]&#13;
+  - evidence: short factual snippet (dates/titles/skills)&#13;
+  - explanation: 1-2 sentences linking evidence to the flag&#13;
+  - questions: array of HIGH-PRIORITY clarification questions, each with:&#13;
+  - text: the exact question to ask the candidate&#13;
+  - rationale: why this question matters (1 short sentence)&#13;
+  - priority: "high"&#13;
+&#13;
+### Detection rules (for red_flags)&#13;
+1) Employment Gaps → any break &gt; 6 months between dated experience entries, unless explained (sabbatical, parental leave) or education overlaps.Calculate the total years of experience and then compare to what is mentioned in the resume&#13;
+2) Job Hopping → 2+ consecutive roles &lt; 12 months within the last 5 years.&#13;
+3) Contradictions → e.g., claims “10+ years” but roles add up to less; graduation year conflicts with years claimed; overlapping full-time roles without explanation.&#13;
+&#13;
+If missing data prevents a confident decision, include a flag with status="inconclusive" and explain what’s missing.&#13;
+&#13;
+### Question generation rules (HIGH PRIORITY only)&#13;
+- Focus on flags that most affect hiring risk or decision speed:&#13;
+  a) Contradictions (tenure totals, overlaps, degree vs experience)  &#13;
+  b) Unexplained employment gaps &gt; 6 months  &#13;
+  c) Multiple short stints (&lt; 12 months) suggesting job hopping  &#13;
+- For each such flag, ask 1 **targeted** questions to resolve it. Do NOT duplicate questions or ask for data that is already present.&#13;
+- Make questions specific, concise, and answerable in one message. Prefer concrete asks:&#13;
+  - Exact month/year ranges (YYYY-MM)&#13;
+  - Reason codes (e.g., contract ended, layoff, relocation, sabbatical, academic leave)&#13;
+  - Simple confirmations (e.g., “Was this role part-time/contract?”)&#13;
+- Keep tone neutral and candidate-friendly. Avoid leading language.&#13;
+&#13;
+### Examples of question patterns (guidance only; do not include in output)&#13;
+- Employment gap: “Can you confirm the reason for the gap from 2024-01 to 2024-10 (e.g., sabbatical, layoff, education)?”&#13;
+- Job hopping: “Was the 2025-03 to 2025-07 role at SkyApps a fixed-term contract? If yes, what was the planned duration?”&#13;
+- Contradiction: “Your summary mentions 10+ years; based on dates we total less. Can you clarify earlier experience not listed?”&#13;
+&#13;
+### Formatting constraints&#13;
+- Return ONLY valid JSON (no code fences, no extra text).&#13;
+- Ensure all array indexes in related_flag_indexes refer to existing red_flags.&#13;
+- Keep rationale short (≤ 20 words).&#13;
+- Limit questions to the top 5–7 highest priority.</modified_prompt>
         <name>IDENTIFY_RED_FLAGS_AND_QUESTIONS_PROMPT</name>
         <original_prompt>Evaluate the following resume JSON for risks and clarification needs.&#13;
 &#13;
@@ -58,13 +100,13 @@ If missing data prevents a confident decision, include a flag with status="incon
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-09-11 02:41:40</sys_created_on>
         <sys_id>2d30f3d7c333221000a8991ed4013192</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>IDENTIFY_RED_FLAGS_AND_QUESTIONS_PROMPT</sys_name>
         <sys_package display_value="ATS" source="x_1761730_ats">5028bbad83cfa2103f57f0d6feaad341</sys_package>
         <sys_policy/>
         <sys_scope display_value="ATS">5028bbad83cfa2103f57f0d6feaad341</sys_scope>
         <sys_update_name>x_1761730_ats_prompts_2d30f3d7c333221000a8991ed4013192</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-09-11 02:41:40</sys_updated_on>
+        <sys_updated_on>2025-09-11 02:43:54</sys_updated_on>
     </x_1761730_ats_prompts>
 </record_update>
